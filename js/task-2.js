@@ -29,6 +29,4 @@ const images = [
 ];
 
 const listGallery = document.querySelector('.gallery');
-
-const result = images.map(image => `<li><img src="${image.url}" alt="${image.alt}" width="400" height="250"/></li>`).join('');
-listGallery.innerHTML = result;
+listGallery.innerHTML = images.map(image => `<li><img src="${image.url}" alt="${image.alt}" width="400" height="250"/></li>`).join('');
