@@ -50,3 +50,9 @@ ul {
   gap: 30px;
   justify-content: center;
 }
+
+#boxes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
