@@ -9,13 +9,18 @@ const createButton = document.querySelector('[data-create]');
 const destroyButton = document.querySelector('[data-destroy]');
 const myBoxes = document.getElementById('boxes');
 
+
 createButton.addEventListener('click', () => {
   const amount = parseInt(input.value);
   createBoxes(amount);
 });
 
+destroyButton.addEventListener('click', () => {
+  destroyBoxes();
+});
+
 function createBoxes(amount) {
-  myBoxes.innerHTML = '';
+  destroyBoxes();
   if (amount >= 1 && amount <= 100) {
     let sizeBox = 30;
     for (let i = 0; i < amount; i++) {
@@ -30,6 +35,6 @@ function createBoxes(amount) {
   input.value = '';
 };
 
-destroyButton.addEventListener('click', () => {
+function destroyBoxes() {
   myBoxes.innerHTML = '';
-});
+};
